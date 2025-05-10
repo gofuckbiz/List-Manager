@@ -1,0 +1,123 @@
+.item-list-container {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.info {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.drag-hint {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+.items-table {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.items-list {
+  min-height: 100px;
+  flex: 1;
+}
+
+.table-header {
+  display: flex;
+  background-color: var(--table-header-bg);
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-row {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--table-border);
+  cursor: grab;
+  background-color: var(--table-bg-color);
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.table-row:hover {
+  background-color: var(--table-hover-bg);
+}
+
+.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.drag-over {
+  border-top: 2px solid var(--highlight-color);
+}
+
+.cell {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.cell.select {
+  width: 10%;
+  justify-content: center;
+}
+
+.cell.id {
+  width: 20%;
+}
+
+.cell.value {
+  width: 70%;
+  justify-content: flex-start;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.sortable:hover {
+  background-color: var(--hover-bg);
+}
+
+.sortable::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+} 
