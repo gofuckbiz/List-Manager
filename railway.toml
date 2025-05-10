@@ -1,8 +1,8 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd frontend && npm install && npm run build && cd ../backend && npm install"
+buildCommand = "npm --prefix ./frontend install && npm --prefix ./frontend run build && npm --prefix ./backend install"
 
 [deploy]
-startCommand = "cd backend && node server.js"
+startCommand = "npm --prefix ./backend start"
 healthcheckPath = "/"
 healthcheckTimeout = 100
